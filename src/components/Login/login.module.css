@@ -1,0 +1,51 @@
+.login{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25%;
+    margin: 90px auto 0px;
+}
+
+.login h2{
+    font-family: 'Poppins', sans-serif;
+    margin: 20px 0;
+}
+
+.formlogin{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+}
+
+.formlogin label{
+    display: flex;
+    flex-direction: column;  
+    width: 100%;
+}
+
+.formlogin label span{
+    margin: 15px 0px 10px 0px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.formlogin label input{
+    width: 100%;
+    background-color: var(--grey);
+    border: 1.2px solid var(--greyTwo);
+    border-radius: 5px;
+    padding: 8px 0px;
+}
+
+.formlogin_button{
+    background-color: var(--orange);
+    border: none;
+    border-radius: 5px;
+    color:white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-top: 25px;
+    padding: 10px 0px;
+    width: 100%;
+}

@@ -35,7 +35,7 @@
     background-color: var(--grey);
     border: 1.2px solid var(--greyTwo);
     border-radius: 5px;
-    padding: 8px 0px;
+    padding: 8px 10px;
 }
 
 .formlogin_button{

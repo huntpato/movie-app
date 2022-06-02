@@ -1,57 +1,62 @@
-import React from 'react'
-import axios from 'axios'
-import styles from './login.module.css'
+import React from 'react';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import swAlert from '@sweetalert/with-react';
+import styles from './login.module.css';
 
 const Login = () => {
+  const { login, formlogin, formlogin_button } = styles;
+  const navigate = useNavigate();
 
-const {login,formlogin,formlogin_button} = styles
-
-const handleSubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-    
-    const regexEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    const regexEmail =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     const email = e.target.email.value;
     const password = e.target.password.value;
-    
-    if(email === '' || password === ''){
-        console.log('Los campos no pueden estar vacíos');
-        return;
+
+    if (email === '' || password === '') {
+      swAlert(<h5>Los campos no pueden estar vacíos</h5>);
+      return;
     }
-    if(email !== '' && !regexEmail.test(email)){
-        console.log('El correo electrónico no es válido');
-        return;
+    if (email !== '' && !regexEmail.test(email)) {
+      swAlert(<h5>El correo electrónico no es válido</h5>);
+      return;
     }
-    if(email !== 'challenge@alkemy.org' || password !== 'react'){
-        console.log('Credenciales inválidas');
-        return
+    if (email !== 'challenge@alkemy.org' || password !== 'react') {
+      swAlert(<h5>Credenciales inválidas</h5>);
+      return;
     }
 
-    console.log('ok para enviar')
     axios
-        .post('http://challenge-react.alkemy.org', { email, password })
-        .then( resp => {
-            console.log(resp.data)
-        }) 
-
-}
+      .post('http://challenge-react.alkemy.org', { email, password })
+      .then((resp) => {
+        swAlert(<h4>Bienvenido</h4>);
+        const token = resp.data.token;
+        localStorage.setItem('token', token);
+        navigate('/list');
+      });
+  };
 
   return (
     <div className={login}>
-        <h2>Log in</h2>
-        <form className={formlogin} onSubmit={handleSubmit}>
-            <label>
-                <span>Correo electrónico</span>
-                <input type='email' name='email'/>
-            </label>
-            <label>
-                <span>Contraseña</span>
-                <input type='password' name='password' />
-            </label>
-            <button type='submit' className={formlogin_button}> Ingresar </button>
-        </form>
+      <h2>Log in</h2>
+      <form className={formlogin} onSubmit={handleSubmit}>
+        <label>
+          <span>Correo electrónico</span>
+          <input type="email" name="email" />
+        </label>
+        <label>
+          <span>Contraseña</span>
+          <input type="password" name="password" />
+        </label>
+        <button type="submit" className={formlogin_button}>
+          Ingresar
+        </button>
+      </form>
     </div>
+  );
+};
 
-  )
-}
-
-export default Login
+export default Login;

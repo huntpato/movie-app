@@ -1,4 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
 import ListContainer from './components/ListContainer/ListContainer';
 import Login from "./components/Login/Login";
 
@@ -6,10 +8,12 @@ import Login from "./components/Login/Login";
 function App() {
   return (
     <>
+      <Header/>
       <Routes>
         <Route path='/' element={<Login/>}/>
         <Route path='/list' element={<ListContainer/>}/>
       </Routes>
+      <Footer/>
     </>
   );
 }

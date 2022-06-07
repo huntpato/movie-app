@@ -1,20 +1,27 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { Navigate } from 'react-router-dom';
+import ListItem from '../ListItem/ListItem';
+import styles from './ListContainer.module.css';
 
 const ListContainer = () => {
-  const navigate = useNavigate();
+  const { listContainer } = styles;
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token === null) {
-      navigate('/');
-    }
-  }, [navigate]);
+  let token = localStorage.getItem('token');
 
   return (
-    <div>
-      <h2>listado</h2>
-    </div>
+    <>
+      {!token ? (
+        <Navigate replace to="/" />
+      ) : (
+        <div className={listContainer}>
+          <h3>Películas disponibles</h3>
+          <ListItem />
+          <ListItem />
+          <ListItem />
+          <ListItem />
+        </div>
+      )}
+    </>
   );
 };
 

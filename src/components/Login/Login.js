@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import swAlert from '@sweetalert/with-react';
 import styles from './login.module.css';
 
@@ -39,23 +39,31 @@ const Login = () => {
       });
   };
 
+  let token = localStorage.getItem('token');
+
   return (
-    <div className={login}>
-      <h2>Log in</h2>
-      <form className={formlogin} onSubmit={handleSubmit}>
-        <label>
-          <span>Correo electrónico</span>
-          <input type="email" name="email" />
-        </label>
-        <label>
-          <span>Contraseña</span>
-          <input type="password" name="password" />
-        </label>
-        <button type="submit" className={formlogin_button}>
-          Ingresar
-        </button>
-      </form>
-    </div>
+    <>
+      {token ? (
+        <Navigate to="/list" />
+      ) : (
+        <div className={login}>
+          <h2>Log in</h2>
+          <form className={formlogin} onSubmit={handleSubmit}>
+            <label>
+              <span>Correo electrónico</span>
+              <input type="email" name="email" />
+            </label>
+            <label>
+              <span>Contraseña</span>
+              <input type="password" name="password" />
+            </label>
+            <button type="submit" className={formlogin_button}>
+              Ingresar
+            </button>
+          </form>
+        </div>
+      )}
+    </>
   );
 };
 

@@ -29,16 +29,16 @@ const Header = () => {
               Listado
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
-              to="/list"
+              to=""
               className={({ isActive }) =>
                 isActive ? header_linkActive : header_link
               }
             >
               Contacto
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </header>

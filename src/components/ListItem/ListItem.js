@@ -1,23 +1,31 @@
-import React from 'react'
+import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './ListItem.module.css'
+import styles from './ListItem.module.css';
 
-const ListItem = () => {
+const ListItem = ({ movieList }) => {
 
-  const { listContainer_item } =styles;  
+  const { listItem, listItem_img, listItem_description } = styles;
 
   return (
-    <div className={listContainer_item}>
-        <img />
-        <div>
-            <h5>Cardtitle</h5>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, nihil.</p>
-            <Link to='/'>
-                <button>Ver detalle</button>
-            </Link>
-        </div>
-    </div>
-  )
-}
+    <>
+      {movieList.map((movie, idx) => {
+        return (
+          <div className={listItem} key={idx}>
+            <div className={listItem_img}>
+              <img src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt='movie poster' />
+            </div>
+            <div className={listItem_description}>
+              <h4>{movie.title.substring(0 ,20)}...</h4>
+              <p>{movie.overview}</p>
+              <Link to="/">
+                <button>Ver más</button>
+              </Link>
+            </div>
+          </div>
+        );
+      })}
+    </>
+  );
+};
 
-export default ListItem
+export default ListItem;

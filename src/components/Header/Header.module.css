@@ -1,9 +1,10 @@
 .header{
-    background-color: var(--orange);
+    background-color: var(--main-color);
     position: fixed;
     top:0;
     height: 2.8rem;
     width:100%;
+    z-index: 10;
 }
 
 /********** nav **********/
@@ -31,7 +32,7 @@
 
 .header_link{
     text-decoration: none;
-    color: var(--main-color);
+    color: var(--grey);
     font-size: 1rem;
     font-weight: 600;
     margin-left: 1rem;
@@ -39,7 +40,7 @@
 
 .header_linkActive{
     text-decoration: none;
-    color: var(--grey);
+    color: var(--orange);
     font-size: 1rem;
     font-weight: 600;
     margin-left: 1rem;

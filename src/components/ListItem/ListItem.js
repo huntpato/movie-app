@@ -5,7 +5,7 @@ import styles from './ListItem.module.css';
 const ListItem = ({ movieList }) => {
 
   const { listItem, listItem_img, listItem_description } = styles;
-console.log(movieList)
+
   return (
     <>
       {movieList.map((movie, idx) => {

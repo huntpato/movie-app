@@ -25,7 +25,7 @@ const ListContainer = () => {
     })
   }, [setMovieList]);
 
-  let token = localStorage.getItem('token');
+  let token = sessionStorage.getItem('token');
 
   return (
     <>

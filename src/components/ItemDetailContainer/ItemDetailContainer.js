@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import swAlert from '@sweetalert/with-react';
 import styles from './ItemDetailContainer.module.css';
+import ItemDetail from '../ItemDetail/ItemDetail';
 
 const ItemDetailContainer = () => {
   const { detailContainer } = styles;
@@ -11,9 +12,9 @@ const ItemDetailContainer = () => {
 
   let query = new URLSearchParams(window.location.search);
   let movieID = query.get('movieID');
-  
-  const [movieData, setMovieData] = useState([]);
-  
+
+  const [movieData, setMovieData] = useState(null);
+
   useEffect(() => {
     const endPointDetail = `https://api.themoviedb.org/3/movie/${movieID}?api_key=11ddf91bee4fd208bc21a652190a2bca&language=es-ES`;
     axios
@@ -27,16 +28,17 @@ const ItemDetailContainer = () => {
       });
   }, [movieID]);
 
-  console.log(movieData);
-
   return (
     <>
       {!token ? (
         <Navigate replace to="/" />
       ) : (
-        <div className={detailContainer}>
-          <h3>Películas disponibles</h3>
-        </div>
+        movieData && (
+          <div className={detailContainer}>
+            <h3>{movieData.title}</h3>
+            <ItemDetail movieData={movieData} />
+          </div>
+        )
       )}
     </>
   );

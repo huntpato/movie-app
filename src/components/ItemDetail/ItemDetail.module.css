@@ -1,0 +1,43 @@
+/********* container *********/
+
+.container{
+    grid-column: 1 / span 2;
+
+    display:grid;
+    grid-template-columns: 0.3fr 1fr;
+    grid-template-rows : 1fr;
+    gap: 1rem 1rem;
+}
+
+/********* img *********/
+
+.container_img{
+    width:100%;
+}
+
+.container_img img{
+    object-fit: covern;
+    width: 100%;
+}
+
+/********* description *********/
+
+.container_description{
+    padding: 0 30px;
+}
+
+.container_description h4{
+    margin-bottom: 5px;
+}
+
+.container_description p{
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.container_description ul li{
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    list-style: none;
+}

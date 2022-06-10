@@ -1,6 +1,22 @@
+/********** container **********/
+
 .detailContainer{
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows : repeat(4, minmax(50px, auto));
+    gap: 1rem 1rem;
+
     position: relative;
     top:2.8rem;
     width:90vw;
-    margin: 30px auto 100px;
+    margin: 30px auto 30px;
+}
+
+/********** list title **********/
+
+.detailContainer h3{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    font-family: 'Poppins', sans-serif;
 }

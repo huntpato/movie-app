@@ -2,7 +2,7 @@
     background-color: var(--main-color);
     position: fixed;
     top:0;
-    height: 2.8rem;
+    height: 3.5rem;
     width:100%;
     z-index: 10;
 }
@@ -12,19 +12,19 @@
 .header nav{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
 
-    height: 2rem;
+    height: 2.4rem;
 }
 
 .header nav ul{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
 
     list-style: none;
-    padding-right: 50px;
+    padding-left: 50px;
     width: 25%;
 }
 
@@ -35,7 +35,7 @@
     color: var(--grey);
     font-size: 1rem;
     font-weight: 600;
-    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .header_linkActive{
@@ -43,5 +43,5 @@
     color: var(--orange);
     font-size: 1rem;
     font-weight: 600;
-    margin-left: 1rem;
+    margin-right: 1rem;
 }

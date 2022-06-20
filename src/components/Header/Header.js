@@ -1,5 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import SearchItem from '../Search/SearchItem';
 import styles from './Header.module.css';
 
 const Header = () => {
@@ -40,6 +41,7 @@ const Header = () => {
             </NavLink>
           </li> */}
         </ul>
+        <SearchItem/>
       </nav>
     </header>
   );

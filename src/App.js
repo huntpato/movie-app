@@ -5,6 +5,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ListContainer from './components/ListContainer/ListContainer';
 
 import Login from "./components/Login/Login";
+import Results from './components/Results/Results';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Login/>}/>
         <Route path='/list' element={<ListContainer/>}/>
         <Route path='/detail' element={<ItemDetailContainer/>}/>
+        <Route path='/results' element={<Results/>}/>
       </Routes>
       <Footer/>
     </>

@@ -3,7 +3,6 @@ import styles from './ItemDetail.module.css';
 
 const ItemDetail = ({ movieData }) => {
   const { container, container_img, container_description } = styles;
-  // console.log(movieData);
 
   return (
     <div className={container}>

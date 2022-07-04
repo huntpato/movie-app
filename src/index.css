@@ -9,12 +9,13 @@
 }
 
 body{
-  background-color: var(--grey);
+  background-color: var(--main-color);
+  /*linear-gradient(-45deg, var(--greyTwo) 0%, var(--grey) 50%, white 100%)*/
   
 }
 
 :root{
-    --main-color: #252525;
+    --main-color: #1a1a1a;
     --orange: #fd5b46;
     --grey: #fcfcfc;
     --greyTwo: #aaaaaa;

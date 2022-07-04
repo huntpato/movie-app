@@ -27,16 +27,19 @@
 }
 
 .container_description h4{
+    color: var(--grey);
     margin-bottom: 5px;
 }
 
 .container_description p{
+    color: var(--greyTwo);
     margin-bottom: 5px;
     font-size: 0.9rem;
     margin-bottom: 10px;
 }
 
 .container_description ul li{
+    color: var(--greyTwo);
     margin-bottom: 5px;
     font-size: 0.9rem;
     list-style: none;

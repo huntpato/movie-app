@@ -13,8 +13,8 @@ const SearchItem = () => {
 
     if (keyword.length === 0) {
       swAlert(<h5>Tienes que escribir una palabra clave</h5>);
-    } else if (keyword.length <= 3) {
-      swAlert(<h5>Por favor escribe más de 3 caracteres</h5>);
+    } else if (keyword.length <= 2) {
+      swAlert(<h5>Por favor escribe más de 2 caracteres</h5>);
     } else {
       e.currentTarget.keyword.value = '';
       navigate(`/results?word=${keyword}`);

@@ -18,7 +18,7 @@ const ListItem = ({ movieList }) => {
               />
             </div>
             <div className={listItem_description}>
-              <h4>{movie.title.substring(0, 20)}...</h4>
+              <h4>{movie.title.substring(0, 30)}...</h4>
               <p>{movie.overview}</p>
               <Link to={`/detail?movieID=${movie.id}`}>
                 <button>Ver más</button>

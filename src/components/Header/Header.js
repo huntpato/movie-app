@@ -30,16 +30,16 @@ const Header = () => {
               Listado
             </NavLink>
           </li>
-          {/* <li>
+          <li>
             <NavLink
-              to=""
+              to="/favorites"
               className={({ isActive }) =>
                 isActive ? header_linkActive : header_link
               }
             >
-              Contacto
+              Favoritos
             </NavLink>
-          </li> */}
+          </li>
         </ul>
         <SearchItem/>
       </nav>

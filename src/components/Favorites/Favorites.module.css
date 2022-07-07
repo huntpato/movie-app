@@ -1,0 +1,108 @@
+/********** container **********/
+
+.favsContainer{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows : repeat(4, minmax(50px, auto));
+    gap: 1.5rem 1.5rem;
+    
+    position: relative;
+    top:3rem;
+    width:90vw;
+    margin: 30px auto 150px;
+}
+
+/********** list title **********/
+
+.favsContainer h3{
+    grid-column: 1 / span 4;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    
+    font-family: 'Poppins', sans-serif;
+    color: var(--grey);
+}
+
+/********** movie container **********/
+
+.movieContainer{
+    border-radius: 10px;
+    padding:10px;
+    position: relative;
+}
+
+/*********** img *********/
+
+.movieContainer_img{
+    width:100%;
+    margin-bottom: 10px;
+}
+
+.movieContainer_img img{
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.movieContainer_img button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
+    background-color: var(--grey);
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    cursor:pointer;
+}
+
+/*********** description *********/
+
+.movieContainer_description h4{
+    color: var(--grey);
+    margin-bottom: 10px;
+}
+
+.movieContainer_description p{
+    color: var(--greyTwo);
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+    width: 100%;
+    
+    line-height: 16px;
+    height: calc(4 * 16px);
+    overflow: hidden;
+    position: relative;
+}
+
+.movieContainer_description p::after{
+    content:'';
+
+    position: absolute;
+    bottom:0;
+    right: 0;
+    height: 16px;
+    width: 75%;
+
+    background: linear-gradient(
+        90deg, transparent, var(--main-color)
+    );
+}
+
+.movieContainer_description button{
+    background-color: var(--main-color);
+    border: 0.5px solid var(--grey);
+    border-radius: 5px;
+    color:white;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 0px;
+    width: 100%;
+}
+

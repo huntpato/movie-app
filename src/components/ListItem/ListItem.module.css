@@ -5,13 +5,14 @@
 
     border-radius: 10px;
     padding:10px;
+    position: relative;
 }
 
 /*********** img *********/
 
 .listItem_img{
     width:100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .listItem_img img{
@@ -21,10 +22,6 @@
 }
 
 /*********** description *********/
-
-/* .listItem_description{
-    padding: 0px 15px 10px 15px ;
-} */
 
 .listItem_description h4{
     color: var(--grey);
@@ -68,3 +65,21 @@
     padding: 10px 0px;
     width: 100%;
 }
+
+/********** button ********/
+ .listItem_button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
+    background-color: var(--grey);
+    border: none;
+    border-radius: 25px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    cursor:pointer;
+ }

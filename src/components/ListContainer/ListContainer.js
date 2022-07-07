@@ -5,7 +5,7 @@ import swAlert from '@sweetalert/with-react';
 import ListItem from '../ListItem/ListItem';
 import styles from './ListContainer.module.css';
 
-const ListContainer = () => {
+const ListContainer = ( {addRemoveFavs} ) => {
 
   const { listContainer } = styles;
 
@@ -34,7 +34,7 @@ const ListContainer = () => {
       ) : (
         <div className={listContainer}>
           <h3>Películas disponibles</h3>
-          <ListItem movieList = {movieList}/>
+          <ListItem movieList = {movieList} addRemoveFavs={addRemoveFavs}/>
         </div>
       )}
     </>

@@ -29,3 +29,21 @@
     margin-left: 6px;
     padding: 4px 10px;
 }
+
+@media (max-width: 768px){
+
+    .formContainer input{
+        width: 150px;
+    }
+}
+
+@media (max-width: 480px){
+
+    .formContainer{
+        padding-right: 25px;
+    }
+
+    .formContainer input{
+        width: 130px;
+    }
+}

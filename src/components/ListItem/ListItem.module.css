@@ -67,7 +67,7 @@
 }
 
 /********** button ********/
- .listItem_button{
+.listItem_button{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,4 +82,34 @@
     right: 20px;
     font-size: 12px;
     cursor:pointer;
- }
+}
+
+@media (max-width: 1024px){
+
+    /*********** img *********/
+
+    .listItem_img img{
+        height: 430px;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    /*********** img *********/
+
+    .listItem_img img{
+        height: 480px;
+    }
+
+}
+
+@media (max-width: 480px){
+
+    /*********** img *********/
+
+    .listItem_img img{
+        height: 600px;
+    }
+
+}

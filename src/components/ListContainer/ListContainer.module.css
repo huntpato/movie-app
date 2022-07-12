@@ -22,3 +22,48 @@
     font-family: 'Poppins', sans-serif;
     color: var(--grey);
 }
+
+@media (max-width: 1024px){
+
+    /********** list container **********/
+
+    .listContainer{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /********** list title **********/
+
+    .listContainer h3{
+        grid-column: 1 / span 3;
+    }
+}
+
+@media (max-width: 768px){
+
+    /********** list container **********/
+
+    .listContainer{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /********** list title **********/
+
+    .listContainer h3{
+        grid-column: 1 / span 2;
+    }
+}
+
+@media (max-width: 480px){
+
+    /********** list container **********/
+
+    .listContainer{
+        grid-template-columns: 1fr;
+    }
+
+    /********** list title **********/
+
+    .listContainer h3{
+        grid-column: 1 / span 1;
+    }
+}

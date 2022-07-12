@@ -25,7 +25,7 @@ const SearchItem = () => {
     <form className={formContainer} onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Escribe una palabra clave..."
+        placeholder="Tu búsqueda..."
         name="keyword"
       ></input>
       <button type="submit">buscar</button>
